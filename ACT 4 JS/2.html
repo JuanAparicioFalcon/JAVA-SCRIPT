@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <script>
+function imprimirNumeros() {
+  for (let i = 1; i <= 100; i++) {
+    if (i % 4 === 0 && i % 7 === 0) {
+     document.write(i + " FullStack"+ "<br>");
+    } else if (i % 4 === 0) {
+      document.write("FrontEnd"+ "<br>");
+    } else if (i % 7 === 0) {
+      document.write("BackEnd"+ "<br>");
+    } else {
+      document.write(i + "<br>");
+    }
+  }
+}
+imprimirNumeros();
+
+    </script>
+  </body>
+</html>
