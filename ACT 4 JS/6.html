@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <script>
+function juegoAdivinarNumero() {
+  let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+  let numeroUsuario;
+
+  do {
+    numeroUsuario = parseInt(prompt("Adivina el número (entre 1 y 10):"));
+  } while (numeroUsuario !== numeroAleatorio);
+
+  document.write("¡Felicidades! Adivinaste el número.");
+}
+
+juegoAdivinarNumero();
+
+    </script>
+  </body>
+</html>

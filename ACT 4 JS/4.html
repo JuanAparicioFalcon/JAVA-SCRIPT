@@ -6,21 +6,26 @@
   </head>
   <body>
     <script>
-N1 = parseInt(prompt("Introduce un numero"));
-N2 = parseInt(prompt("Introduce otro numero"));
-        
-    for(let i = N1 ; i > N2 ;i++)
-    {
-        if(N1/i==0 || N2/i==0)
-        {
-            document.write("Multiplo:"+i+"<br>")
-            i++;
-        }else
-            {
-                i++;
-            }
-    }
+function imprimirMultiplosDe8(num1, num2) {
+  // Asegurarse de que num1 sea el menor y num2 el mayor
+  let inicio = Math.min(num1, num2);
+  let fin = Math.max(num1, num2);
 
+ document.write("Los múltiplos de 8 entre 2"+ inicio + " y "+fin+" son:");
+  
+  for (let i = inicio; i <= fin; i++) {
+    if (i % 8 === 0) {
+      document.write(i);
+    }
+  }
+}
+
+// Pedir dos números al usuario
+let numero1 = parseInt(prompt("Introduce el primer número:"));
+let numero2 = parseInt(prompt("Introduce el segundo número:"));
+
+// Llamar a la función para imprimir los múltiplos de 8
+imprimirMultiplosDe8(numero1, numero2);
     </script>
   </body>
 </html>
