@@ -7,15 +7,16 @@
 </head>
 <body>
     <h2>Convertidor de Temperatura</h2>
-    
+    <!-- textarea para escribir la temperatura -->
     <input type="number" id="temperatura" placeholder="Introduce temperatura">
-    
+    <!-- botones para la conversion-->
     <button onclick="convertirCelsiusAFahrenheit()">Convertir a Fahrenheit</button>
     <button onclick="convertirFahrenheitACelsius()">Convertir a Celsius</button>
     
     <p id="resultado"></p>
 
     <script>
+        //conversion a celsius
         function convertirCelsiusAFahrenheit() {
             let celsius = document.getElementById("temperatura").value;
             celsius = parseFloat(celsius);
@@ -26,7 +27,7 @@
                 document.getElementById("resultado").textContent = `El clima en Fahrenheit sería: ${fahrenheit}°F (como un cactus en el desierto).`;
             }
         }
-
+       // conversion a fahrenheit
         function convertirFahrenheitACelsius() {
             let fahrenheit = document.getElementById("temperatura").value;
             fahrenheit = parseFloat(fahrenheit);

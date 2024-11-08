@@ -6,6 +6,7 @@
     <title> Hora Actual</title>
 </head>
 <body>
+    <!-- texto y areas que se actualizan-->
     <h2>Hora Actual</h2>
 
     <label for="hora">Hora:</label>
@@ -18,6 +19,7 @@
     <button onclick="actualizarHora()">Actualizar Hora</button>
 
     <script>
+        //actualizar la hora
         function actualizarHora() {
             const ahora = new Date();
             document.getElementById("hora").value = ahora.getHours().toString().padStart(2, '0');

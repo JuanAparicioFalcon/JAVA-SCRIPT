@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Palabras</title>
+</head>
+<body>
+    <h2>Contador de Palabras</h2>
+    
+    <textarea id="texto" placeholder="Escribe algo aquí..." rows="5" cols="40"></textarea>
+    <p>Palabras: <span id="contador">0</span></p>
+
+    <script>
+        // Función para contar palabras
+        function contarPalabras() {
+            const texto = document.getElementById('texto').value;
+            const palabras = texto.trim().split(' ').filter(palabra => palabra !== '');
+            document.getElementById('contador').textContent = palabras.length;
+        }
+
+        // Detecta cambios en el texto
+        document.getElementById('texto').addEventListener('input', contarPalabras);
+    </script>
+</body>
+</html>
