@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Temperatura</title>
+</head>
+<body>
+    <h2>Convertidor de Temperatura</h2>
+    
+    <input type="number" id="temperatura" placeholder="Introduce temperatura">
+    
+    <button onclick="convertirCelsiusAFahrenheit()">Convertir a Fahrenheit</button>
+    <button onclick="convertirFahrenheitACelsius()">Convertir a Celsius</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        function convertirCelsiusAFahrenheit() {
+            let celsius = document.getElementById("temperatura").value;
+            celsius = parseFloat(celsius);
+            if (isNaN(celsius)) {
+                document.getElementById("resultado").textContent = "No has introducido un número válido.";
+            } else {
+                let fahrenheit = (celsius * 9 / 5) + 32;
+                document.getElementById("resultado").textContent = `El clima en Fahrenheit sería: ${fahrenheit}°F (como un cactus en el desierto).`;
+            }
+        }
+
+        function convertirFahrenheitACelsius() {
+            let fahrenheit = document.getElementById("temperatura").value;
+            fahrenheit = parseFloat(fahrenheit);
+            if (isNaN(fahrenheit)) {
+                document.getElementById("resultado").textContent = "No has introducido un número válido.";
+            } else {
+                let celsius = (fahrenheit - 32) * 5 / 9;
+                document.getElementById("resultado").textContent = `El clima en Celsius sería: ${celsius}°C (más fresco que una piña bajo una sombrilla).`;
+            }
+        }
+    </script>
+</body>
+</html>

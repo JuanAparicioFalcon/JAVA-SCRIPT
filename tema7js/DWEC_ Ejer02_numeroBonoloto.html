@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bonoloto</title>
+  
+</head>
+<body>
+    <div class="container">
+        <h2> Bonoloto</h2>
+        <button onclick="generarNumeros()">Generar Números</button>
+        <p class="result" id="resultado"></p>
+    </div>
+
+    <script>
+        function generarNumeros() {
+            const numeros = new Set();
+
+            while (numeros.size < 6) {
+                const numero = Math.floor(Math.random() * 49) + 1;
+                numeros.add(numero);
+            }
+
+         
+            const numerosOrdenados = Array.from(numeros).sort((a, b) => a - b);
+
+            const complementario = Math.floor(Math.random() * 9) + 1;
+
+            // Muestra el resultado
+            document.getElementById('resultado').innerHTML = `
+                Números: ${numerosOrdenados.join(', ')} <br>
+                Complementario: ${complementario}
+            `;
+        }
+    </script>
+</body>
+</html>

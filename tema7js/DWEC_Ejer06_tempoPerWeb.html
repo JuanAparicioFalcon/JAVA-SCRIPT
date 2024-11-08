@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo en la Página</title>
+</head>
+<body>
+    <h3>Llevas aquí  <span id="contador">0</span> segundos.</h3>
+
+    <script>
+        let tiempo = 0;
+        const contadorElemento = document.getElementById("contador");
+
+        setInterval(() => {
+            tiempo++;
+            contadorElemento.textContent = tiempo;
+        }, 1000);
+    </script>
+</body>
+</html>

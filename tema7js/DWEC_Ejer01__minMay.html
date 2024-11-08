@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mayusculas y Minusculas</title>
+  
+</head>
+<body>
+    <div class="container">
+        <h2>Verificador de Mayúsculas y Minúsculas</h2>
+        <input type="text" id="texto" placeholder="Ingresa una cadena de texto">
+        <button onclick="verificarTexto()">Verificar</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarTexto() {
+            const texto = document.getElementById('texto').value;
+            let resultado = '';
+
+            if (texto === texto.toUpperCase()) {
+                resultado = 'La cadena está formada solo por MAYÚSCULAS.';
+            } else if (texto === texto.toLowerCase()) {
+                resultado = ' La cadena está formada solo por minúsculas.';
+            } else {
+                resultado =  'La cadena contiene una mezcla de mayúsculas y minúsculas.';
+            }
+
+            document.getElementById('resultado').textContent = resultado;
+        }
+    </script>
+</body>
+</html>

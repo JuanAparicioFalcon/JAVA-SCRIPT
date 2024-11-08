@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+</head>
+<body>
+    <h2>Calculadora Básica</h2>
+    
+    <input type="number" id="numero1" placeholder="Número 1">
+    <input type="number" id="numero2" placeholder="Número 2">
+    
+    <br><br>
+    
+    <button onclick="sumar()">Sumar</button>
+    <button onclick="restar()">Restar</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    
+    <h3>Resultado: <span id="resultado">0</span></h3>
+
+    <script>
+        function sumar() {
+            const num1 = parseFloat(document.getElementById('numero1').value);
+            const num2 = parseFloat(document.getElementById('numero2').value);
+            document.getElementById('resultado').textContent = num1 + num2;
+        }
+
+        function restar() {
+            const num1 = parseFloat(document.getElementById('numero1').value);
+            const num2 = parseFloat(document.getElementById('numero2').value);
+            document.getElementById('resultado').textContent = num1 - num2;
+        }
+
+        function multiplicar() {
+            const num1 = parseFloat(document.getElementById('numero1').value);
+            const num2 = parseFloat(document.getElementById('numero2').value);
+            document.getElementById('resultado').textContent = num1 * num2;
+        }
+
+        function dividir() {
+            const num1 = parseFloat(document.getElementById('numero1').value);
+            const num2 = parseFloat(document.getElementById('numero2').value);
+            if (num2 !== 0) {
+                document.getElementById('resultado').textContent = num1 / num2;
+            } else {
+                document.getElementById('resultado').textContent = 'Error: División por 0';
+            }
+        }
+    </script>
+</body>
+</html>
